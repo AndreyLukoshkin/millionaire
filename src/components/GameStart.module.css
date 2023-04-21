@@ -1,0 +1,48 @@
+.mainDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1button {
+  margin-left: 50px;
+}
+
+.backgroundGradient {
+  width: 1440px;
+  height: 900px;
+  background: linear-gradient(
+    to bottom right,
+    #ffffff 50%,
+    rgba(0, 73, 116, 5%) 50%
+  );
+}
+
+.buttonStart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3891b1;
+  width: 296px;
+  height: 64px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.buttonText {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mainText {
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 56px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  color: #1c1c21;
+}
