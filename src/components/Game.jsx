@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import questions from '../jsonQuestions/questions'
-import Questions from './Questions'
+import QuestionsAndScores from './QuestionsAndScores'
 
-const Game = ({ setScore, score }) => {
+const Game = ({ setScore, score, setFinalScore }) => {
   const [data, setData] = useState([])
 
   useEffect(() => {
     setData(questions)
   }, [])
+
   return (
     <>
-      <Questions score={score} setScore={setScore} questions={data} />
+      <QuestionsAndScores
+        score={score}
+        setScore={setScore}
+        questions={data}
+        setFinalScore={setFinalScore}
+      />
     </>
   )
 }
