@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
+/* MEDIA PORTRAIT */
+
 @media (orientation: portrait) {
   .backgroundGradientWrapper {
     width: 100vw;
@@ -50,6 +52,8 @@
     background-color: #003b63;
   }
 }
+
+/* MEDIA LANDSCAPE */
 
 @media (orientation: landscape) {
   .backgroundGradientWrapper {
