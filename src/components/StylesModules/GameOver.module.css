@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
-@media (max-width: 425px) {
+@media (orientation: portrait) {
   .backgroundMain {
     width: 100vw;
     height: 100vh;
@@ -60,7 +60,7 @@
   }
 }
 
-@media (min-width: 421px) {
+@media (orientation: landscape) {
   .backgroundMain {
     width: 100%;
     height: 100vh;
