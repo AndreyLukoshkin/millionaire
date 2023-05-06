@@ -13,7 +13,6 @@ body {
 .wrapper {
   width: 100vw;
   height: 100vh;
-  position: sticky;
   position: relative;
 }
 
@@ -252,12 +251,6 @@ body {
 /* MAX WIDTH 480px - MOBILE PHONES */
 
 @media (orientation: portrait) {
-  html,
-  body,
-  #root {
-    height: 100vh;
-  }
-
   .gameContainer {
     display: flex;
     flex-direction: column;
@@ -336,7 +329,7 @@ body {
   .correct-answer::after,
   .wrong-answer::before,
   .wrong-answer::after {
-    width: 7%;
+    width: 5.9%;
     top: 48.93%;
   }
 
@@ -349,7 +342,7 @@ body {
     position: absolute;
     right: -100%;
     transition: 0.3s;
-    transform: scale(0);
+    display: none;
   }
   .upScoreWrapper {
     transform: scale(1);
@@ -364,6 +357,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+    z-index: 0;
   }
 
   .scoreContainer {
