@@ -475,17 +475,13 @@ body {
 @media (orientation: landscape) {
   :root {
     --safe-area-inset-top: env(safe-area-inset-top);
-  }
-
-  @media (min-height: calc(100vh - var(--safe-area-inset-top))) {
-    html,
-    body {
-      height: 100%;
-    }
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
   }
 
   #root {
-    height: calc(100vh - var(--safe-area-inset-top));
+    height: calc(
+      100vh - var(--safe-area-inset-top) - var(--safe-area-inset-bottom)
+    );
   }
 
   /* MAIN CONTAINER */
