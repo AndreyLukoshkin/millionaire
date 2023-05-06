@@ -251,10 +251,19 @@ body {
 /* MAX WIDTH 480px - MOBILE PHONES */
 
 @media (orientation: portrait) {
+  .wrapper {
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+  }
+
   .gameContainer {
+    width: 80vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #f5f5f7;
   }
 
   .questionText {
