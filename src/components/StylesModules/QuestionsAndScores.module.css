@@ -473,6 +473,21 @@ body {
 /* ORIENTATION: LANDSCAPE */
 
 @media (orientation: landscape) {
+  :root {
+    --safe-area-inset-top: env(safe-area-inset-top);
+  }
+
+  @media (min-height: calc(100vh - var(--safe-area-inset-top))) {
+    html,
+    body {
+      height: 100%;
+    }
+  }
+
+  #root {
+    height: calc(100vh - var(--safe-area-inset-top));
+  }
+
   /* MAIN CONTAINER */
 
   .wrapper {
