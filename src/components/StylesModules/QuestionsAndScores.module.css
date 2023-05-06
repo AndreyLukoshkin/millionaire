@@ -251,29 +251,7 @@ body {
 /* ORIENTATION: PORTRAIT */
 
 @media (orientation: portrait) {
-  :root {
-    --safe-area-inset-top: env(safe-area-inset-top);
-    --safe-area-inset-bottom: env(safe-area-inset-bottom);
-  }
-
-  @media (min-height: calc(100vh - var(--safe-area-inset-top))) {
-    body {
-      height: 100vh;
-    }
-  }
-  @media (min-height: calc(100vh - var(--safe-area-inset-bottom))) {
-    body {
-      height: 100vh;
-    }
-  }
-
-  .wrapper {
-    height: 90vh;
-    position: relative;
-  }
-
   .gameContainer {
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -495,6 +473,17 @@ body {
 /* ORIENTATION: LANDSCAPE */
 
 @media (orientation: landscape) {
+  :root {
+    --safe-area-inset-left: env(safe-area-inset-left);
+  }
+
+  @media (min-width: calc(100vw - var(--safe-area-inset-left))) {
+    .wrapper,
+    .gameContainer {
+      height: 100vh;
+    }
+  }
+
   /* MAIN CONTAINER */
 
   .wrapper {
@@ -687,38 +676,3 @@ body {
     width: 28.63%;
   }
 }
-
-:root {
-  --safe-area-inset-right: env(safe-area-inset-right);
-  --safe-area-inset-left: env(safe-area-inset-left);
-}
-
-@media (min-width: calc(100vw - var(--safe-area-inset-right))) {
-  body {
-    height: 100vh;
-  }
-}
-@media (min-width: calc(100vw - var(--safe-area-inset-left))) {
-  body {
-    height: 100vh;
-  }
-}
-
-/* @media (orientation: landscape) and (max-width: 900px) {
-  .wrapper {
-    width: 90vw;
-    height: 90vh;
-    position: relative;
-  }
-
-  .gameContainer {
-    background-color: red;
-    width: 90vw;
-    height: 90vh;
-    background-color: #f5f5f7;
-  }
-
-  .answersWrapper {
-    background-color: yellow;
-  }
-} */
