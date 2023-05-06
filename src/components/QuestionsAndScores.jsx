@@ -26,7 +26,7 @@ const QuestionsAndScores = ({ questions, setScore, score }) => {
         <div className={styles.wrapper}>
           <div className={styles.gameContainer}>
             <Burger setUpScoresWrapper={setUpScoresWrapper} />
-            <div>
+            <div className={styles.questionContainer}>
               <Question currentQuestion={currentQuestion} />
             </div>
             <div className={styles.answersWrapper}>
