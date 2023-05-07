@@ -473,17 +473,6 @@ body {
 /* ORIENTATION: LANDSCAPE */
 
 @media (orientation: landscape) {
-  :root {
-    --safe-area-inset-top: env(safe-area-inset-top);
-    --safe-area-inset-bottom: env(safe-area-inset-bottom);
-  }
-
-  #root {
-    height: calc(
-      100vh - var(--safe-area-inset-top) - var(--safe-area-inset-bottom)
-    );
-  }
-
   /* MAIN CONTAINER */
 
   .wrapper {
@@ -674,5 +663,34 @@ body {
   .currentScore:after {
     top: 49%;
     width: 28.63%;
+  }
+}
+
+/* ULTRAWIDE MONITORS */
+
+@media screen and (device-aspect-ratio: 32/9) {
+  .wrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 50%;
+    position: relative;
+  }
+}
+
+@media screen and (device-aspect-ratio: 43/18) {
+  .wrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 70%;
+    position: relative;
+  }
+}
+
+@media screen and (device-aspect-ratio: 64/27) {
+  .wrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 80%;
+    position: relative;
   }
 }
