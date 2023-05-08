@@ -1,17 +1,20 @@
+import { useState } from 'react'
 import styles from './StylesModules/QuestionsAndScores.module.css'
 
 const Question = ({ currentQuestion }) => {
-  const someFuncTestError = () => {
-    const obj = {}
-    return obj.map((el) => console.log(el))
+  const [counter, setCounter] = useState(0)
+
+  const handleClick = () => {
+    setCounter((counter) => (counter += 1))
   }
 
+  if (counter === 5) {
+    throw new Error('I crashed!')
+  }
   return (
-    <>
-      <h1 onClick={someFuncTestError} className={styles.questionText}>
-        {currentQuestion?.question}
-      </h1>
-    </>
+    <h1 onClick={handleClick} className={styles.questionText}>
+      {currentQuestion?.question}
+    </h1>
   )
 }
 
