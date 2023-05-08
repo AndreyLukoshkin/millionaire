@@ -5,7 +5,7 @@ const GameOver = ({ finalScore, score }) => {
   const navigate = useNavigate()
   return (
     <>
-      <div className={styles.backgroundMain}>
+      <div className={styles.backgroundGradientWrapper}>
         <div className={styles.hand}></div>
         <div className={styles.totalAndScores}>
           <h1 className={styles.totalScore}>Total score:</h1>
