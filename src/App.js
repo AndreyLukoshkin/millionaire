@@ -20,11 +20,7 @@ function App() {
       <div className="App"></div>
       <Routes>
         <Route>
-          <Route
-            path="/"
-            index
-            element={<GameStart setScore={setScore} />}
-          ></Route>
+          <Route path="/" element={<GameStart setScore={setScore} />}></Route>
           <Route
             path="/game"
             element={<Game score={score} setScore={setScore} />}

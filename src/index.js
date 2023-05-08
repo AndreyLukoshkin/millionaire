@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <>
-    {/* <ErrorBoundary fallback={<p>Something went wrong</p>}> */}
-    <App />
-    {/* </ErrorBoundary> */}
+    <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
+      <App />
+    </ErrorBoundary>
   </>
 )
 
