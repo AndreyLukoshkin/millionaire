@@ -1,51 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
-/* MEDIA PORTRAIT */
+
+/* ORIENTATION: PORTRAIT */
 
 @media (orientation: portrait) {
   .backgroundGradientWrapper {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(
       to bottom right,
       #ffffff 50%,
       rgba(255, 243, 235) 50%
     );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: 46% 27% 27%;
+    justify-items: center;
+    align-items: start;
   }
 
   .hand {
-    margin-top: 25%;
     background-image: url('/public/images/hand.svg');
-    background-position: center;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 28%;
+    height: 60%;
+    margin-top: 30.63vw;
   }
 
   .mainText {
-    margin-bottom: 23%;
+    padding: 5vh;
     text-align: center;
     font-family: 'Inter';
     font-weight: 600;
-    font-size: 32px;
-    line-height: 37.12px;
+    font-size: 10vw;
+    line-height: 11.6vw;
     color: #1c1c21;
   }
   .buttonStart {
-    margin-bottom: 10%;
+    margin-top: 10vh;
     background-color: #1e6a8e;
     width: 90%;
-    height: 8.5%;
-    border-radius: 8px;
+    height: 31.3%;
+    border-radius: 1.4vh;
     cursor: pointer;
     font-family: 'Inter';
     color: #ffffff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 4.38vw;
     text-decoration: none;
   }
   .buttonStart:active {
@@ -53,19 +54,19 @@
   }
 }
 
-/* MEDIA LANDSCAPE */
+/* ORIENTATION: LANDSCAPE */
 
 @media (orientation: landscape) {
   .backgroundGradientWrapper {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(
       to bottom right,
       #ffffff 50%,
-      rgba(0, 73, 116, 5%) 50%
+      rgba(0, 73, 116, 0.5%) 50%
     );
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 51.11% 48.89%;
     grid-template-rows: 1fr 1fr;
     align-items: center;
   }
@@ -76,33 +77,36 @@
     background-position: center;
     background-size: 100% 100%;
     width: 100%;
-    height: 28%;
+    height: 40%;
+    margin-bottom: 8vh;
   }
 
   .mainText {
+    width: 70%;
     align-self: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
     font-weight: 600;
-    font-size: 56px;
+    font-size: 6.23vh;
     font-family: 'Inter';
     font-style: normal;
     color: #1c1c21;
   }
 
   .buttonStart {
+    margin-top: 3vh;
     align-self: flex-start;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1e6a8e;
-    width: 296px;
-    height: 64px;
-    border-radius: 12px;
+    width: 32.9vh;
+    height: 7.12vh;
+    border-radius: 1vh;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     color: #ffffff;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 2.23vh;
     text-decoration: none;
   }
 
@@ -116,5 +120,31 @@
     transition-property: background-color;
     transition-duration: 0.2s;
     background-color: #003b63;
+  }
+}
+
+/* ULTRAWIDE MONITORS */
+
+@media screen and (device-aspect-ratio: 32/9) {
+  .backgroundGradientWrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 50%;
+  }
+}
+
+@media screen and (device-aspect-ratio: 43/18) {
+  .backgroundGradientWrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 80%;
+  }
+}
+
+@media screen and (device-aspect-ratio: 64/27) {
+  .backgroundGradientWrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 80%;
   }
 }
