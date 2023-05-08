@@ -5,6 +5,7 @@ import GameStart from './components/GameStart'
 import Game from './components/Game'
 import GameOver from './components/GameOver'
 import scoresArray from './jsonQuestions/scoresArray'
+import NotFound from './components/NotFound'
 
 function App() {
   const [score, setScore] = useState(0)
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route>
           <Route
-            path="/*"
+            path="/"
             index
             element={<GameStart setScore={setScore} />}
           ></Route>
@@ -32,6 +33,7 @@ function App() {
             path="/game/gameover"
             element={<GameOver score={score} finalScore={finalScore} />}
           ></Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
